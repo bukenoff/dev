@@ -73,6 +73,8 @@ return packer.startup(function(use)
 
   use "wakatime/vim-wakatime"
 
+  use "numToStr/Comment.nvim"
+
   if packer_bootstrap then
     require("packer").sync()
   end
