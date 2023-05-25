@@ -18,8 +18,8 @@ keymap.set("n", "<leader>sx", ":close<CR>")
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>")
 keymap.set("n", "<leader>tx", ":tabclose<CR>")
-keymap.set("n", "<leader>tn", ":tabn<CR>")
-keymap.set("n", "<leader>tp", ":tabp<CR>")
+keymap.set("n", "H", ":tabn<CR>")
+keymap.set("n", "L", ":tabp<CR>")
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
