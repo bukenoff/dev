@@ -70,10 +70,21 @@ return packer.startup(function(use)
   use "windwp/nvim-ts-autotag"
   -- git signs
   use "lewis6991/gitsigns.nvim"
-
+  -- time tracking
   use "wakatime/vim-wakatime"
-
+  -- comment
   use "numToStr/Comment.nvim"
+
+  use {
+    "glepnir/dashboard-nvim",
+    event = "VimEnter",
+    config = function()
+      require("dashboard").setup {
+        -- config
+      }
+    end,
+    requires = { "nvim-tree/nvim-web-devicons" },
+  }
 
   if packer_bootstrap then
     require("packer").sync()
