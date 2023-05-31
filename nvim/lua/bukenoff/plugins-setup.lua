@@ -85,6 +85,8 @@ return packer.startup(function(use)
     end,
     requires = { "nvim-tree/nvim-web-devicons" },
   }
+  -- move lines
+  use "fedepujol/move.nvim"
 
   if packer_bootstrap then
     require("packer").sync()
