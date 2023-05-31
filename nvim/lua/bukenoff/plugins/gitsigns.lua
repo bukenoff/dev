@@ -3,6 +3,8 @@ if not setup then
   return
 end
 
+local wk = require "which-key"
+
 local on_attach = function(bufnr)
   local gs = package.loaded.gitsigns
 
@@ -32,7 +34,6 @@ local on_attach = function(bufnr)
     end)
     return "<Ignore>"
   end, { expr = true })
-
   -- Actions
   map("n", "<leader>hs", gs.stage_hunk)
   map("n", "<leader>hr", gs.reset_hunk)
@@ -58,6 +59,21 @@ local on_attach = function(bufnr)
 
   -- Text object
   map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
+
+  -- Whickey documentation
+  wk.register {
+    ["<leader>h"] = { name = "Hunk actions" },
+    ["<leader>hs"] = { name = "Stage hunk" },
+    ["<leader>hr"] = { name = "Reset hunk" },
+    ["<leader>hS"] = { name = "Stage buffer" },
+    ["<leader>hu"] = { name = "Undo stage hunk" },
+    ["<leader>hR"] = { name = "Reset buffer" },
+    ["<leader>hp"] = { name = "Preview hunk" },
+    ["<leader>hb"] = { name = "Blame line" },
+    ["<leader>tb"] = { name = "Toggle blame line" },
+    ["<leader>hd"] = { name = "Diff this" },
+    ["<leader>td"] = { name = "Toggle deleted" },
+  }
 end
 
 gitsigns.setup { on_attach = on_attach }
