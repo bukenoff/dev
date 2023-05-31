@@ -30,7 +30,6 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- lua functions for other plugins
   use "bluz71/vim-nightfly-guicolors" -- colorscheme
   use "christoomey/vim-tmux-navigator" -- tmux & split window navigation
-  use "tpope/vim-surround"
   use "vim-scripts/ReplaceWithRegister"
   use "nvim-tree/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
