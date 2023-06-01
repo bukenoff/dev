@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
-local wk = require "which-key"
 
 -- general
 keymap.set("i", "jk", "<ESC>")
@@ -11,20 +10,16 @@ keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 
 -- split window
-wk.register {
-  ["<leader>sv"] = { "<C-w>v", "Split vertically" },
-  ["<leader>sh"] = { "<C-w>s", "Split horizontally" },
-  ["<leader>se"] = { "<C-w>=", "Make split windows equal width and height" },
-  ["<leader>sx"] = { ":close<CR>", "Close current split window" },
-}
+keymap.set("n", "<leader>sv", "<C-w>v")
+keymap.set("n", "<leader>sh", "<C-w>s")
+keymap.set("n", "<leader>se", "<C-w>=")
+keymap.set("n", "<leader>sx", ":close<CR>")
 
 -- tabs
-wk.register {
-  ["<leader>to"] = { ":tabnew<CR>", "Open new tab" },
-  ["<leader>tx"] = { ":tabclose<CR>", "Close current tab" },
-  ["L"] = { ":tabn<CR>", "Move to next tab" },
-  ["H"] = { ":tabp<CR>", "Move to prev tab" },
-}
+keymap.set("n", "<leader>to", ":tabnew<CR>")
+keymap.set("n", "<leader>tx", ":tabclose<CR>")
+keymap.set("n", "L", ":tabn<CR>")
+keymap.set("n", "H", ":tabp<CR>")
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
