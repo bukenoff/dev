@@ -10,26 +10,31 @@ keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 
 -- split window
-keymap.set("n", "<leader>sv", "<C-w>v")
-keymap.set("n", "<leader>sh", "<C-w>s")
-keymap.set("n", "<leader>se", "<C-w>=")
-keymap.set("n", "<leader>sx", ":close<CR>")
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make split windows equal height and width" })
+keymap.set("n", "<leader>sx", ":close<CR>", { desc = "Close split window" })
 
 -- tabs
-keymap.set("n", "<leader>to", ":tabnew<CR>")
-keymap.set("n", "<leader>tx", ":tabclose<CR>")
-keymap.set("n", "L", ":tabn<CR>")
-keymap.set("n", "H", ":tabp<CR>")
+keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = "Open new tab" })
+keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "Close current tab" })
+keymap.set("n", "L", ":tabn<CR>", { desc = "Next tab" })
+keymap.set("n", "H", ":tabp<CR>", { desc = "Prev tab" })
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file tree" })
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Search a file" })
+keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Search a string" })
+keymap.set(
+  "n",
+  "<leader>fc",
+  "<cmd>Telescope grep_string<cr>",
+  { desc = "Search for a string that is currently under cursor" }
+)
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "List current buffers" })
+keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "List available help tags" })
 
 -- move lines
 local opts = { noremap = true, silent = true }
