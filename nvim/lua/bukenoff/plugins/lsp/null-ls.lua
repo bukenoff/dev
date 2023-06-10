@@ -11,7 +11,9 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup {
   sources = {
-    formatting.prettier,
+    formatting.prettier.with {
+      disabled_filetypes = { "json" },
+    },
     formatting.stylua,
     diagnostics.eslint_d,
     code_actions.eslint_d,
