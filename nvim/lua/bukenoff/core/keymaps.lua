@@ -51,3 +51,6 @@ keymap.set("v", "<A-j>", ":MoveBlock(1)<CR>", opts)
 keymap.set("v", "<A-k>", ":MoveBlock(-1)<CR>", opts)
 keymap.set("v", "<A-h>", ":MoveHBlock(-1)<CR>", opts)
 keymap.set("v", "<A-l>", ":MoveHBlock(1)<CR>", opts)
+
+-- LazyGit
+keymap.set("n", "<leader>gg", ":LazyGit<CR>", opts)
