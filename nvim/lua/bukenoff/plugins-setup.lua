@@ -73,17 +73,6 @@ return packer.startup(function(use)
   use "wakatime/vim-wakatime"
   -- comment
   use "numToStr/Comment.nvim"
-
-  use {
-    "glepnir/dashboard-nvim",
-    event = "VimEnter",
-    config = function()
-      require("dashboard").setup {
-        -- config
-      }
-    end,
-    requires = { "nvim-tree/nvim-web-devicons" },
-  }
   -- move lines
   use "fedepujol/move.nvim"
   -- which key
