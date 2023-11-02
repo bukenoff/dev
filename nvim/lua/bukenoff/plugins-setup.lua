@@ -88,13 +88,7 @@ return packer.startup(function(use)
     end,
   }
   -- git integration
-  use {
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    requires = {
-      "nvim-lua/plenary.nvim",
-    },
-  }
+  use "aspeddro/gitui.nvim"
 
   if packer_bootstrap then
     require("packer").sync()
