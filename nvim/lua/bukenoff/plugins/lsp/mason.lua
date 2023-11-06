@@ -15,7 +15,7 @@ end
 
 mason.setup()
 
-mason_lspconfig.setup({
+mason_lspconfig.setup {
   ensure_installed = {
     "tsserver",
     "html",
@@ -23,15 +23,16 @@ mason_lspconfig.setup({
     "tailwindcss",
     "lua_ls",
     "emmet_ls",
+    "gopls",
   },
   automatic_installation = true,
-})
+}
 
-mason_null_ls.setup({
+mason_null_ls.setup {
   ensure_installed = {
     "prettier",
     "stylua",
     "eslint_d",
   },
   automatic_installation = true,
-})
+}
