@@ -28,7 +28,7 @@ end
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- packer stuff
   use "nvim-lua/plenary.nvim" -- lua functions for other plugins
-  use "bluz71/vim-nightfly-guicolors" -- colorscheme
+  use { "catppuccin/nvim", as = "catppuccin" } -- colorscheme
   use "christoomey/vim-tmux-navigator" -- tmux & split window navigation
   use "vim-scripts/ReplaceWithRegister"
   use "nvim-tree/nvim-tree.lua"
