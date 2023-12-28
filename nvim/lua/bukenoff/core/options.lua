@@ -1,4 +1,4 @@
-local opt = vim.opt -- for conciseness
+local opt = vim.opt
 
 -- line numbers
 opt.relativenumber = true
@@ -17,10 +17,10 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
---cursor line
+-- cursor line
 opt.cursorline = true
 
---appearance
+-- appearance
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
