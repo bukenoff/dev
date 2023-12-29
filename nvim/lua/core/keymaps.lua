@@ -21,21 +21,6 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "Close current tab" })
 keymap.set("n", "L", ":tabn<CR>", { desc = "Next tab" })
 keymap.set("n", "H", ":tabp<CR>", { desc = "Prev tab" })
 
--- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file tree" })
-
--- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Search a file" })
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Search a string" })
-keymap.set(
-  "n",
-  "<leader>fc",
-  "<cmd>Telescope grep_string<cr>",
-  { desc = "Search for a string that is currently under cursor" }
-)
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "List current buffers" })
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "List available help tags" })
-
 -- move lines
 local opts = { noremap = true, silent = true }
 -- Normal-mode commands

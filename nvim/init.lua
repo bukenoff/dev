@@ -1,16 +1,18 @@
-require "bukenoff.plugins-setup"
-require "bukenoff.core.options"
-require "bukenoff.core.keymaps"
-require "bukenoff.core.colorscheme"
-require "bukenoff.plugins.nvim-tree"
-require "bukenoff.plugins.lualine"
-require "bukenoff.plugins.telescope"
-require "bukenoff.plugins.nvim-cmp"
-require "bukenoff.plugins.lsp.mason"
-require "bukenoff.plugins.lsp.lspconfig"
-require "bukenoff.plugins.lsp.null-ls"
-require "bukenoff.plugins.autopairs"
-require "bukenoff.plugins.treesitter"
-require "bukenoff.plugins.gitsigns"
-require "bukenoff.plugins.comment"
-require "bukenoff.plugins.gitui"
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system {
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  }
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+require "core.options"
+require "core.keymaps"
+
+require("lazy").setup "plugins"
