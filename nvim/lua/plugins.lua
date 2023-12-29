@@ -3,14 +3,6 @@ return {
   "christoomey/vim-tmux-navigator",
   "vim-scripts/ReplaceWithRegister",
   "kyazdani42/nvim-web-devicons",
-  -- autocomplete
-   "hrsh7th/nvim-cmp",
-   "hrsh7th/cmp-buffer",
-   "hrsh7th/cmp-path",
-  -- snippets
-   "L3MON4D3/LuaSnip",
-   "saadparwaiz1/cmp_luasnip",
-   "rafamadriz/friendly-snippets",
   -- manage and install lsp servers
    "williamboman/mason.nvim",
    "williamboman/mason-lspconfig.nvim",
@@ -18,7 +10,6 @@ return {
    "neovim/nvim-lspconfig",
    "hrsh7th/cmp-nvim-lsp",
    "jose-elias-alvarez/typescript.nvim",
-   "onsails/lspkind.nvim",
   -- format and lint
    "jose-elias-alvarez/null-ls.nvim",
    "jayp0521/mason-null-ls.nvim",

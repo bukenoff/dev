@@ -7,8 +7,8 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    local telescope = require "telescope"
-    local actions = require "telescope.actions"
+    local telescope = require("telescope")
+    local actions = require("telescope.actions")
 
     telescope.setup {
       defaults = {
@@ -23,7 +23,7 @@ return {
       },
     }
 
-    telescope.load_extension "fzf"
+    telescope.load_extension("fzf")
 
     local keymap = vim.keymap
 
