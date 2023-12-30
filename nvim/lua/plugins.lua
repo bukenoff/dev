@@ -2,16 +2,6 @@ return {
  "nvim-lua/plenary.nvim",
   "christoomey/vim-tmux-navigator",
   "vim-scripts/ReplaceWithRegister",
-  -- manage and install lsp servers
-   "williamboman/mason.nvim",
-   "williamboman/mason-lspconfig.nvim",
-  -- configure lsp servers
-   "neovim/nvim-lspconfig",
-   "hrsh7th/cmp-nvim-lsp",
-   "jose-elias-alvarez/typescript.nvim",
-  -- format and lint
-   "jose-elias-alvarez/null-ls.nvim",
-   "jayp0521/mason-null-ls.nvim",
   -- git signs
    "lewis6991/gitsigns.nvim",
   -- time tracking
