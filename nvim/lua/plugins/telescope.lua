@@ -10,7 +10,7 @@ return {
     local telescope = require("telescope")
     local actions = require("telescope.actions")
 
-    telescope.setup {
+    telescope.setup ({
       defaults = {
         path_display = { "truncate " },
         mappings = {
@@ -21,9 +21,7 @@ return {
           },
         },
       },
-    }
-
-    telescope.load_extension("fzf")
+    })
 
     local keymap = vim.keymap
 
