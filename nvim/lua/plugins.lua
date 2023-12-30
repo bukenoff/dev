@@ -4,8 +4,6 @@ return {
   "vim-scripts/ReplaceWithRegister",
   -- time tracking
    "wakatime/vim-wakatime",
-  -- comment
-   "numToStr/Comment.nvim",
   -- move lines
    "fedepujol/move.nvim",
   -- which key
