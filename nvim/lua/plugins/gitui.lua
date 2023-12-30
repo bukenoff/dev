@@ -1,5 +1,8 @@
 return {
-   "aspeddro/gitui.nvim",
+  "aspeddro/gitui.nvim",
+  keys = {
+    { "<leader>gg", "<cmd>Gitui<CR>", desc = "Open gitui interface" },
+  },
   config = function()
     require("gitui").setup {
       command = {
