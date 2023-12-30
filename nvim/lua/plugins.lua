@@ -2,7 +2,6 @@ return {
  "nvim-lua/plenary.nvim",
   "christoomey/vim-tmux-navigator",
   "vim-scripts/ReplaceWithRegister",
-  "kyazdani42/nvim-web-devicons",
   -- manage and install lsp servers
    "williamboman/mason.nvim",
    "williamboman/mason-lspconfig.nvim",
