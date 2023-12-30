@@ -1,13 +1,11 @@
 return {
- "nvim-lua/plenary.nvim",
+  "nvim-lua/plenary.nvim",
   "christoomey/vim-tmux-navigator",
   "vim-scripts/ReplaceWithRegister",
   -- time tracking
-   "wakatime/vim-wakatime",
-  -- move lines
-   "fedepujol/move.nvim",
+  "wakatime/vim-wakatime",
   -- which key
-   {
+  {
     "folke/which-key.nvim",
     config = function()
       vim.o.timeout = true
