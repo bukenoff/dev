@@ -2,8 +2,6 @@ return {
  "nvim-lua/plenary.nvim",
   "christoomey/vim-tmux-navigator",
   "vim-scripts/ReplaceWithRegister",
-  -- git signs
-   "lewis6991/gitsigns.nvim",
   -- time tracking
    "wakatime/vim-wakatime",
   -- comment
