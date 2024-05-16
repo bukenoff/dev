@@ -15,5 +15,22 @@ return {
     vim.keymap.set("v", "<A-k>", ":MoveBlock(-1)<CR>", opts)
     vim.keymap.set("v", "<A-h>", ":MoveHBlock(-1)<CR>", opts)
     vim.keymap.set("v", "<A-l>", ":MoveHBlock(1)<CR>", opts)
+
+    require("move").setup {
+      line = {
+        enable = true,
+        indent = true,
+      },
+      block = {
+        enable = true,
+        indent = true,
+      },
+      word = {
+        enable = true,
+      },
+      char = {
+        enable = true,
+      },
+    }
   end,
 }
