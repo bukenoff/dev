@@ -15,13 +15,17 @@ return {
     local on_attach = function(client, bufnr)
       local opts = { noremap = true, silent = true, buffer = bufnr }
 
+      local function getOptions(description)
+        return { noremap = true, silent = true, buffer = bufnr, desc = description }
+      end
+
       keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
       keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
       keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
       keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
       keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-      keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-      keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+      keymap.set("n", "<leader>cda", vim.lsp.buf.code_action, getOptions "Code actions")
+      keymap.set({ "n", "v" }, "<leader>cda", vim.lsp.buf.code_action, getOptions "Code actions")
       keymap.set("n", "<leader>rn", ":IncRename ", opts)
       keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
       keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
