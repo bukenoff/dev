@@ -8,5 +8,9 @@ return {
     "nvim-telescope/telescope.nvim", -- optional
     "ibhagwan/fzf-lua", -- optional
   },
-  config = true,
+  config = function()
+    local opts = { noremap = true, silent = true }
+    vim.keymap.set("n", "<leader>dvo", ":DiffviewOpen<CR>", opts)
+    vim.keymap.set("n", "<leader>dvx", ":DiffviewClose<CR>", opts)
+  end,
 }
