@@ -9,8 +9,11 @@ return {
     "ibhagwan/fzf-lua", -- optional
   },
   config = function()
+    require("neogit").setup {}
+
     local opts = { noremap = true, silent = true }
     vim.keymap.set("n", "<leader>dvo", ":DiffviewOpen<CR>", opts)
     vim.keymap.set("n", "<leader>dvx", ":DiffviewClose<CR>", opts)
+    vim.keymap.set("n", "<leader>gt", ":Neogit<CR>", opts)
   end,
 }
