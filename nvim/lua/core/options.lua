@@ -34,3 +34,6 @@ opt.clipboard:append "unnamedplus"
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
+
+--cursor blinking
+opt.guicursor = "a:blinkon500"
