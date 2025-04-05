@@ -20,6 +20,7 @@ return {
         "lua_ls",
         "emmet_ls",
         "gopls",
+        "clangd",
       },
       automatic_installation = true,
     }
