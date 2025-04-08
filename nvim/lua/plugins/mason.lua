@@ -31,6 +31,7 @@ return {
         "stylua",
         "eslint_d",
         "rust_analyzer",
+        "clangformat",
       },
       automatic_installation = true,
     }

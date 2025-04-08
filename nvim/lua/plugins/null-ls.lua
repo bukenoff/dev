@@ -1,11 +1,12 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
   config = function()
-    local null_ls = require("null-ls")
+    local null_ls = require "null-ls"
 
     local formatting = null_ls.builtins.formatting
     local diagnostics = null_ls.builtins.diagnostics
     local code_actions = null_ls.builtins.code_actions
+    local cpp_formatting = null_ls.builtins.formatting.clang_format
 
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -18,6 +19,7 @@ return {
         diagnostics.eslint_d,
         code_actions.eslint_d,
         code_actions.gitsigns,
+        cpp_formatting,
       },
       on_attach = function(current_client, bufnr)
         if current_client.supports_method "textDocument/formatting" then
@@ -37,5 +39,5 @@ return {
         end
       end,
     }
-  end
+  end,
 }
