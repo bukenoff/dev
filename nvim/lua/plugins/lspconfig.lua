@@ -32,12 +32,6 @@ return {
       keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
       keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
       keymap.set("n", "K", vim.lsp.buf.hover, opts)
-
-      if client.name == "tsserver" then
-        keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
-        keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>")
-        keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>")
-      end
     end
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -58,7 +52,7 @@ return {
       on_attach = on_attach,
     }
 
-    lspconfig["tsserver"].setup {
+    lspconfig["ts_ls"].setup {
       capabilities = capabilities,
       on_attach = on_attach,
     }
