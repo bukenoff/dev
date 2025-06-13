@@ -2,7 +2,7 @@ return {
   "williamboman/mason.nvim",
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
-    "jayp0521/mason-null-ls.nvim",
+    "jay-babu/mason-null-ls.nvim",
   },
   config = function()
     local mason = require "mason"
@@ -13,7 +13,7 @@ return {
 
     mason_lspconfig.setup {
       ensure_installed = {
-        "tsserver",
+        "ts_ls",
         "html",
         "cssls",
         "tailwindcss",
