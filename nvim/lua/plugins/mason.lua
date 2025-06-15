@@ -28,6 +28,7 @@ return {
 
     mason_null_ls.setup {
       ensure_installed = {
+        "ts_ls",
         "prettier",
         "stylua",
         "eslint_d",
