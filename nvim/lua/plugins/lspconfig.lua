@@ -26,7 +26,6 @@ return {
       keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
       keymap.set("n", "<leader>cda", vim.lsp.buf.code_action, getOptions "Code actions")
       keymap.set({ "n", "v" }, "<leader>cda", vim.lsp.buf.code_action, getOptions "Code actions")
-      keymap.set("n", "<leader>rn", ":IncRename ", opts)
       keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
       keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
       keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
