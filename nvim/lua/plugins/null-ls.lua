@@ -1,5 +1,8 @@
 return {
   "nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim"
+  },
   config = function()
     local null_ls = require "null-ls"
 
@@ -12,6 +15,7 @@ return {
 
     null_ls.setup {
       sources = {
+        require("none-ls.code_actions.eslint"),
         formatting.prettier.with {
           disabled_filetypes = { "json", "yaml" },
         },
