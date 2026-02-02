@@ -17,6 +17,8 @@ keymap.set("n", "<leader>sx", ":close<CR>", { desc = "Close split window" })
 
 -- tabs
 keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = "Open new tab" })
+keymap.set("n", "<leader>ts", "<C-w>T", { desc = "Open split in a new tab" })
+
 keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "Close current tab" })
 keymap.set("n", "<leader>tax", ":tabonly<CR>", { desc = "Close all tabs except for current tab" })
 keymap.set("n", "L", ":tabn<CR>", { desc = "Next tab" })
