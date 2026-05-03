@@ -130,5 +130,10 @@ return {
         "rust-analyzer",
       },
     }
+
+    lspconfig["biome"].setup {
+      single_file_support = false,
+      on_attach = on_attach,
+    }
   end,
 }

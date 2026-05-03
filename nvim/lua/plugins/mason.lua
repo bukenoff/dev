@@ -22,6 +22,7 @@ return {
         "gopls",
         "rust_analyzer",
         "clangd",
+        "biome",
       },
       automatic_installation = true,
     }
