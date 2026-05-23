@@ -1,5 +1,6 @@
 local opt = vim.opt
 
+opt.timeoutlen = 300 -- Decrease to 250-300ms for a more responsive leader key
 -- line numbers
 opt.number = true
 
