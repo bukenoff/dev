@@ -28,18 +28,27 @@ return {
       keymap.set({ "n", "v" }, "<leader>cda", vim.lsp.buf.code_action, getOptions "Code actions")
       keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
       keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-      keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-      keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+      keymap.set("n", "[d", function()
+        vim.diagnostic.jump { count = -1, float = true }
+      end, opts)
+      keymap.set("n", "]d", function()
+        vim.diagnostic.jump { count = 1, float = true }
+      end, opts)
       keymap.set("n", "K", vim.lsp.buf.hover, opts)
     end
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    local signs = { Error = "", Warn = "", Hint = "", Info = "" }
-    for type, icon in pairs(signs) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-    end
+    vim.diagnostic.config {
+      signs = {
+        text = {
+          [vim.diagnostic.severity.ERROR] = "",
+          [vim.diagnostic.severity.WARN] = "",
+          [vim.diagnostic.severity.HINT] = "",
+          [vim.diagnostic.severity.INFO] = "",
+        },
+      },
+    }
 
     lspconfig["html"].setup {
       capabilities = capabilities,
