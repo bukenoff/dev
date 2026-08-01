@@ -2,9 +2,10 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     event = { "BufReadPre", "BufNewFile" },
+    branch = "main",
     build = ":TSUpdate",
     config = function()
-      local treesitter = require "nvim-treesitter.configs"
+      local treesitter = require "nvim-treesitter.config"
 
       treesitter.setup {
         highlight = {
@@ -13,6 +14,7 @@ return {
         indent = { enable = true },
         autotag = { enable = true },
         ensure_installed = {
+          "java",
           "json",
           "javascript",
           "typescript",
