@@ -23,6 +23,7 @@ return {
         "rust_analyzer",
         "clangd",
         "biome",
+        "jdtls",
       },
       automatic_installation = true,
     }

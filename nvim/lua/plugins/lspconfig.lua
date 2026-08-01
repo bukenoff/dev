@@ -34,7 +34,6 @@ return {
       keymap.set("n", "]d", function()
         vim.diagnostic.jump { count = 1, float = true }
       end, opts)
-      keymap.set("n", "K", vim.lsp.buf.hover, opts)
     end
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -51,6 +50,11 @@ return {
     }
 
     lspconfig["html"].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
+    lspconfig["jdtls"].setup {
       capabilities = capabilities,
       on_attach = on_attach,
     }
