@@ -15,6 +15,7 @@ return {
       ensure_installed = {
         "ts_ls",
         "html",
+        "phpactor",
         "cssls",
         "tailwindcss",
         "lua_ls",
