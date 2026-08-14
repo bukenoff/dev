@@ -9,6 +9,10 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 keymap.set("v", "<leader>p", '"_dP', { desc = "Paste without yanking" })
+keymap.set("n", "<leader>cr", function()
+  vim.fn.setreg("+", vim.fn.expand "%")
+  print("Copied relative path: " .. vim.fn.expand "%")
+end, { desc = "Copy relative path" })
 
 -- split window
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
