@@ -22,6 +22,7 @@ return {
         "php",
         "php_only",
         "phpdoc",
+        "rust",
         "svelte",
         "tsx",
         "typescript",
