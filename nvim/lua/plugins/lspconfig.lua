@@ -149,6 +149,18 @@ return {
       },
     }
 
+    lspconfig["kotlin_lsp"].setup {
+      cmd = { "kotlin-lsp" },
+      root_dir = lspconfig.util.root_pattern(
+        "settings.gradle",
+        "settings.gradle.kts",
+        "build.gradle",
+        "build.gradle.kts",
+        "pom.xml",
+        ".git"
+      ),
+    }
+
     lspconfig["biome"].setup {
       single_file_support = false,
       on_attach = on_attach,

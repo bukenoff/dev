@@ -18,6 +18,7 @@ return {
         "phpactor",
         "cssls",
         "tailwindcss",
+        "kotlin_lsp",
         "lua_ls",
         "emmet_ls",
         "gopls",
